@@ -4,11 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ServerPDFApplication {
-
+public class ServerPdfApplication {
 	public static void main(String[] args) {
-		SpringApplication.run(ServerPDFApplication.class, args);
-		ServidorPDF x=new ServidorPDF();
+		SpringApplication.run(ServerPdfApplication.class, args);
+		Servidor x=new Servidor();
 		x.iniciar();
 	}
 }
