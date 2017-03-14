@@ -26,7 +26,7 @@ public class ServidorPDF {
 				public void run(){
 					try{
 						entrada=new Scanner (sCliente.getInputStream());
-						FileOutputStream archivo = new FileOutputStream("C:/Users/miguel/Desktop/pedido.pdf");
+						FileOutputStream archivo = new FileOutputStream("/home/azureuser/pedido.pdf");
 						Document documento = new Document();
 						PdfWriter.getInstance(documento, archivo);
 						documento.open();
