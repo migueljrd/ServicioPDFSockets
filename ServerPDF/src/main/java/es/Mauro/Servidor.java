@@ -11,9 +11,6 @@ public class Servidor {
 	private ServerSocket sServidor;
 	private Socket sCliente;
 	private Scanner entrada;
-	private String salida;
-	private int puerto;
-	private String mensaje="";
 	public void iniciar(){
 		try{
 			sServidor=new ServerSocket(9990);
