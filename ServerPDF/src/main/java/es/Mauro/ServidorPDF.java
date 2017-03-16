@@ -18,7 +18,8 @@ public class ServidorPDF {
 	private String mensaje="";
 	public void iniciar(){
 		try{
-			sServidor=new ServerSocket(9990);
+			sServidor=new ServerSocket(9991);
+			while(true){
 			System.out.println(" - SERVIDOR INICIADO - ");
 			System.out.println(" - Esperando Cliente - ");
 			sCliente=sServidor.accept();
@@ -43,6 +44,7 @@ public class ServidorPDF {
 				}
 			}.start();
 		}
+		}
 		catch(Exception e){
 			e.printStackTrace();
 			finalizar();
@@ -50,10 +52,8 @@ public class ServidorPDF {
 		}
 	public void finalizar(){
 		try{
-			//salida.close();
 			entrada.close();
 			sCliente.close();
-			sServidor.close();
 			System.out.print("Conexion Finalizada!!");
 		}catch(Exception e)
 		{
